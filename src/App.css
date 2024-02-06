@@ -1,38 +1,964 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  width: 100%;
+  margin: 0 auto;
+ height:100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+    width: 100%;
+    padding-top: 7px;
+    height: 250px;
+  
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header1 {
+  width: 100%;
+  height: 80px;
+ display: flex  ;
+}
+
+.phantuheader1{
+  width: 75%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  
+}
+
+.header2{
+  width: 100%;
+  background-color: #202025;
+}
+
+.phantuheader2 {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #202025;
+
+}
+.phantuheader2 ul{
+  display: flex ;
+  margin: 0 auto;
+  height: 65px;
+  list-style: none;
+  align-items: center;  
+  background-color: #202025;  
+}
+
+.phantuheader2 ul li {
+  padding-right: 19px;
   align-items: center;
+  background-color: #202025;
+ 
+}
+
+.phantuheader2 ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 13.5px;
+  font-weight: 550;
+  background-color: #202025;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.menu-item {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-link:hover {
+  color: #ff7f50;
+}
+
+/* Style the caret icon */
+.menu-link svg {
+  margin-left: 5px;
+}
+
+.theloai{
+  background-color: #161619;
+  display: none;
+}
+
+.theloai {
+  position: absolute;
+  background-color: #161619;
+  border: 1px solid #202025;
+  border-radius: 5px;
+  display: none;
+  padding: 10px;
+  z-index: 1;
+  
+ 
+}
+
+.menu-item:hover .theloai {
+  display: block;
+}
+
+.menu-link {
+  position: relative;
+  cursor: pointer;
+ 
+}
+
+.menu-link:hover .theloai {
+  display: block;
+}
+
+/* Style the table inside the dropdown */
+.theloai table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color:#161619;
+}
+
+.theloai th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #202025;
+  text-align: center;
+  align-items: center;
+  width: 240px;
+}
+
+.theloai th:last-child {
+  border-right: none;
+}
+
+.theloai td {
+  padding: 8px;
+  border-bottom: 1px solid #202025;
+}
+
+.theloai td:last-child {
+  border-right: none;
+}
+
+table.theloai tr th:hover{
+  background-color: gray;
+}
+table.theloai tr th:hover a{
+  background-color: gray;
+}
+
+.phimhot {
+  width: 75%;
+  margin: 0 auto;
+ 
+}
+
+
+.thefilm {
+  position: relative;
+  width: 180px;
+  height:100%;
+  display: inline-block;
+  margin-left: 7px;
+  transition: width 0.3s ease;
+ 
+  margin: 0 auto;
+  border-radius: 8px;
+ margin-right: 10px;
+ 
+ 
+}
+.thefilm img{
+ 
+  transition: transform 0.3s ease;
+}
+
+.thefilm:hover img{
+  transform: scale(1.1);
+
+}
+
+.thefilm img {
+  width: 180px;
+  height: 256px;
+  display: block;
+  border-radius: 8px;
+}
+
+.thefilm p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s linear;
+ margin-left: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin: 0;
+  align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+
+
+.dsfilm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all 0.3s linear;
+  user-select: none;
+  height: 256px;
+  scroll-behavior: smooth;
+  overflow: scroll;
+ 
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+  overflow-y: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.dsfilm:hover .thefilm:not(:hover) {
+  opacity: 0.7; /* Làm mờ các phần tử .thefilm khác khi hover vào một phần tử cụ thể */
+}
+
+.danhmucfilm {
+  display: flex;
+  width: 75%;
+  margin-top: 22px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.leftdanhmucfilm {
+  width: 75%;
+  margin-right: 20px;
+ 
+}
+
+.rightdanhmucfilm {
+  width: 24%;
+  
+}
+
+.phimhotchung{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+  
+}
+
+.thefilmphimhot{
+  margin-right: 8px;
+  position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    opacity: 1;
+  transition: all 0.2s linear;
+
+
+}
+
+.thefilmphimhot img{
+  width: 180px;
+  height:260px;
+  border-radius: 15px;
+}
+
+.thefilmphimhot p {
+  position: absolute;
+  bottom: 0; /* Đặt ở dưới hình ảnh */
+  left: 0; /* Đặt ở cùng cột với hình ảnh */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+   color: white; /* Màu chữ của đoạn văn */
+  padding: 5px 10px;
+  width: 100%; /* Độ rộng bằng với container cha */
+}
+
+.thefilmphimhot:hover{
+  transform: scale(1.04);
+  opacity: 0.5;
+}
+
+.filmrightcon p{
+     color: white;
+     flex-direction: column;
+    
+}
+
+.titlecon p a{
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rightfooter td{
+  background-color: #353535;
+  font-size: 14px;
+  width: 125px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.rightfooter td a{
+  text-decoration: none;
+  color: white;
+  background-color: #353535;
+}
+/* sdgdzhzfhrg */
+
+
+/* CSS for .anhdetailfilm */
+.anhdetailfilm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width:33%;
+  
+}
+
+.anhdetailfilm-img {
+  width: 260px;
+  height: 350px;
+  border: 2px solid gray;
+  border-radius: 8px;
+}
+
+.anhdetailfilm-buttons {
+  position: absolute;
+  
+  margin-top: 270px;
+  
+}
+
+.anhdetailfilm-buttons button {
+
+  border-radius: 10px;
+  width: 105px;
+  height: 35px;
+  color: tomato;
+  font-weight: 550;
+  background-color: white;
+  border: 1px solid tomato;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 10;
+  
+}
+
+/* CSS for .thongtindetailfilm */
+.thongtindetailfilm {
+ 
+  margin-left: 15px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding-left: 8px;
+  width: 62%;
+}
+
+.film-title {
+  color: white;
+  font-family: inherit;
+}
+
+.film-nameenglish {
+  color: white;
+ 
+}
+
+.film-info hr {
+  border-top: 1px solid #EFB900;
+  margin-top: -13px;
+}
+
+.film-info p {
+  color:white;
+  margin-top: -18px;
+
+}
+
+
+/* CSS for .chontapfilm */
+.chontapfilm {
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  transition: all 0.2s linear;
+  transition: transform 0.3s ease-in-out;
+}
+
+.server-button
+{
+  margin-right: 7px;
+  margin-bottom: 7px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: white;
+  width:100px;
+}
+
+.episode-button {
+   background-color: #353535;  
+   color: white;
+   width:65 px;
+   border-radius: 5px;
+}
+
+/* CSS for .motaphim */
+.motaphim {
+  width: 97%;
+  background-color: #161619;
+  border: 0.5px solid gray;
+  margin-top: 20px;
+}
+
+.motaphim h2 {
+  color: #98926F;
+  padding-left: 10px;
+}
+
+.motaphim p {
+  color: #98926F;
+  padding-left: 10px;
+}
+
+.leftcontentbodydetail{
+  margin-top: 7px;
+  width:100%;
+}
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #0056b3;
+}
+
+/* CSS Styling cho danh mục phim */
+.thefilmphimhot {
+  /* CSS của bạn cho mỗi danh mục phim */
+}
+
+
+.leftadminpanel{
+  width: 15%;
+  background-color: black;
+}
+
+/* Thêm CSS cho phần "chontapfilm" */
+.chontapfilm {
+  /* CSS mặc định, ban đầu ẩn đi */
+  display: none;
+}
+
+/* CSS để hiển thị phần "chontapfilm" khi biến trạng thái showChonTap là true */
+.chontapfilm.show {
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* CSS để xoay biểu tượng 90 độ khi trạng thái "rotated" được kích hoạt */
+.chon-tap-button.rotated .AiFillCaretRight {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* admin left */
+
+.bodyleftadmin ul li a{
+ font-size: 18px;
+ color:white;
+ font-weight: 520;
+ 
+}
+.bodyleftadmin{
+  margin-top: 15px;
+}
+
+.danhmucfilmadminpage{
+  margin-left: 45px;
+}
+
+.buttontoggle {
+  display: none; /* Show the button on smaller screens */
+}
+
+
+@media screen and (max-width: 972px) {
+  
+  .buttontoggle {
+    display: block; /* Show the button on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .phantuheader2 ul.menu-list.visible {
+    position: relative;
+    display: block;
+   /* When the menu is visible, show it */
+    background-color: #202025;
+   width:100%;
+   float: left;
+    border: 1px solid #ccc;
+    border: none;
+    opacity: 2;
+    transition: 0.5s ease;
+    border-radius: 50%;
+
+   
+    
+ 
+  }
+  .theloai tr th a{
+      font-size: 12px;
+  }
+ 
+  .phantuheader2 ul.menu-list.visible li a{
+   font-size: 16px;
+  }
+  .phantuheader2 ul.menu-list{
+    display: none;
+    transition: 0.5s all;
+  }
+
+  /* kasldjflaskgjdsfl */
+
+
+  .contentbodydetail {
+    width: 100%;
+   
+    flex-direction: column;
+   
+   
+
+  }
+  
+ 
+  
+    .leftcontentbodydetail,.rightcontentbodydetail {
+      width: 100%;
+    
+    
+    }
+  
+    .anhdetailfilm {
+      width: 100%;
+      flex-direction: column;
+     
+    }
+    .phimkinhdiright,.rightchung,.filmrightcon{
+      width:100%;
+      
+    }
+    
+
+    .thongtindetailfilm{
+         width:100%;
+         margin-left: 0px;
+       
+         
+    }
+
+    .ml-auto{
+      display: none;
+    }
+   
+   
+    /* egshsths */
+}
+
+
+@media screen and (max-width: 1025px) {
+  .danhmucfilm {
+    
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftdanhmucfilm {
+    width: 100%;
+  }
+
+
+  .rightdanhmucfilm{
+    width:100%;
+  }
+  .containerxemphim{
+    width:100%;
+ 
+    flex-direction: column;
+   }
+   .leftxemphim{
+    margin:0 auto;
+    margin-top: -40px;
+   }
+  
+}
+@media screen and (min-width:975px) and (max-width:1350px){
+ 
+  .anhdetailfilm-buttons button{
+    border-radius: 10px;
+    width: 60px;
+    height: 45px;
+    color: tomato ;
+    font-weight: 550;
+    background-color: white;
+    border: 1px solid tomato;
+    font-size: 13px;
+  }
+  .anhdetailfilm-buttons{
+    margin-top: 285px;
+  }
+
+ 
+ 
+}
+@media screen and (min-width:1350px){
+  .anhdetailfilm-buttons{
+    margin-top: 300px;
+  }
+  .thefilmphimhot {
+    width:160px
+  }
+  .thefilmphimhot img {
+    width:160px
   }
 }
+
+@media screen and (max-width:691px){
+  .thefilmphimhot img{
+    width: 200px;
+  }
+  .thefilmphimhot{
+
+    margin-left: 20px;
+   
+  
+  }
+  .form-control{
+    display: none;
+  }
+
+
+ .containerxemphim{
+  width:100%;
+
+  flex-direction: column;
+ }
+ .leftxemphim{
+  margin:0 auto;
+  margin-top: -40px;
+ }
+
+
+}
+
+.leftphimhanhdong{
+  width: 70%;
+  
+ 
+}
+
+.rightdanhmuctheloaifilm{
+  width:28%;
+}
+
+
+@media screen and (max-width:960px){
+  .containerphimhanhdong{
+   
+    flex-direction: column;
+    display: flex;
+  }
+ 
+  .leftphimhanhdong{
+    width:100%;
+  
+  
+  }
+  .rightdanhmuctheloaifilm{
+    width:100%;
+  }
+  
+}
+
+@media screen and (max-width: 475px) {
+  .contentbodydetail {
+    width: 100%;
+    flex-direction: column;
+  }
+  .leftcontentbodydetail,.rightcontentbodydetail {
+      width: 100%;  
+    }
+    .gop2phan, .anhdetailfilm {
+      width: 100%;
+      flex-direction: column;
+    }
+    .phimkinhdiright,.rightchung,.filmrightcon{
+      width:100%;
+    }
+    .thongtindetailfilm{
+         width:100%;
+         margin-left: 0px;
+         margin-top: 15px;        
+    }
+    .ml-auto{
+      display: none;
+    }
+   
+
+  
+
+   .containerxemphim{
+    width:100%;
+ 
+    flex-direction: column;
+   }
+   .leftxemphim{
+    margin:0 auto;
+    margin-top: -40px;
+   }
+   button.ml-auto{
+    display: none;
+  }
+  .danhmucfilm {
+   float:left;
+    width:100%;
+
+  }
+  .phimhotchung{
+    width:100%;
+
+  }
+  .thefilmphimhot{
+    width:170px;
+   
+  }
+
+ .thefilmphimhot img{
+    width:170px;
+   
+  }
+  .tieudebody{
+    display: none;
+  }
+  .card{
+    
+    margin-left: -40px;
+  }
+  .phantuheader1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+  }
+
+  .form-control {
+    max-width: 100%;
+  }
+
+  .input-group-append {
+    margin-top: 5px; /* Adjust the margin as needed */
+  }
+
+  .containerxemphim{
+    width:100%;
+  }
+
+}
+
+@media screen and (max-width:397px){
+   
+  .contentbodydetail {
+    width: 100%;
+    flex-direction: column;
+  }
+  .leftcontentbodydetail,.rightcontentbodydetail {
+      width: 100%;  
+    }
+    .gop2phan, .anhdetailfilm {
+      width: 100%;
+      flex-direction: column;
+    }
+    .phimkinhdiright,.rightchung,.filmrightcon{
+      width:100%;
+    }
+    .thongtindetailfilm{
+         width:100%;
+         margin-left: 0px;
+         margin-top: 15px;        
+    }
+  
+   
+  
+   .containerxemphim{
+    width:100%;
+ 
+    flex-direction: column;
+   }
+   .leftxemphim{
+    margin:0 auto;
+    margin-top: -40px;
+    
+   }
+   button.ml-auto{
+    display: none;
+  }
+  .danhmucfilm {
+   float:left;
+    width:100%;
+    margin-left: 20px;
+
+  }
+  .phimhotchung{
+    width:100%;
+
+  }
+  .thefilmphimhot{
+    width:150px;
+   margin-left: 0px;
+  }
+
+ .thefilmphimhot img{
+    width:150px;
+   
+  }
+  .tieudebody{
+    display: none;
+  }
+  .card{
+    
+    margin-left: -50px;
+  }
+  .phantuheader1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+  }
+
+  .form-control {
+    max-width: 100%;
+  }
+
+  .input-group-append {
+    margin-top: 5px; /* Adjust the margin as needed */
+
+}
+}
+
+/* containerphimhanhdong */
+@media screen and (max-width:650px){
+
+  .containerphimbohq,.rightcontainerphimbohq,.leftcontainerphimbohq {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+  }
+  .leftcontainerphimbohq{
+    width:100%;
+    margin-top: -10px;
+    
+  }
+  .rightcontainerphimbohq{
+    width:100%;
+    
+  }
+.nhucc{
+  margin-top: -20px;
+}
+
+
+
+
+}
+
+.leftcontainerphimbohq{
+  width:100%;
+}
+.rightcontainerphimbohq{
+  width:360px;
+  margin-left: 8px;
+  margin-top: -30px;
+}
+
+
+
+
+@media screen and (min-width:475px) and (max-width:600px){
+  .anhdetailfilm-buttons button{
+    border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    color: tomato ;
+    font-weight: 550;
+    background-color: white;
+    border: 1px solid tomato;
+    font-size: 13px;
+  }
+  .anhdetailfilm-buttons{
+    margin-top: 235px;
+  }
+  button.ml-auto,input{
+    display: none;
+  }
+  .thefilmphimhot{
+    width:160px;
+    margin-left: 0px;
+   
+  }
+
+ .thefilmphimhot img{
+    width:160px;
+   
+  }
+  .tieudebody{
+    display: none;
+  }
+
+}
+
